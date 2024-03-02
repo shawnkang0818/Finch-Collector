@@ -21,7 +21,7 @@ class Finch(models.Model):
     return reverse('finch-detail', kwargs={'finch_id': self.id})
    
 class Feeding(models.Model):
-    date = models.DateField()
+    date = models.DateField('Feeding date')
     meal = models.CharField(
       max_length=1,
       # add the 'choices' field option
