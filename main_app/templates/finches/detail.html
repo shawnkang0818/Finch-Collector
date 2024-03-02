@@ -15,7 +15,7 @@
   <div class="cat-img">
     <img 
       src="{% static 'images/bird.svg' %}" 
-      alt="A skater boy cat"
+      alt="A bird"
     >
   </div>
   <div class="cat-details">
@@ -26,6 +26,10 @@
       <h2>A {{ finch.breed }} kitten.</h2>
     {% endif %}
     <p>{{ finch.description }}</p>
+    <div class="cat-actions">
+      <a href="{% url 'finch-update' finch.id %}" class="btn warn">Edit</a>
+      <a href="{% url 'finch-delete' finch.id %}" class="btn danger">Delete</a>
+    </div>
   </div>
 </section>
 
